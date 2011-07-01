@@ -69,7 +69,8 @@ set visualbell
 set guioptions-=T
 
 " Default gui color scheme
-color ir_black
+color jammy
+set guifont=Anonymous_Pro:h16
 
 " ConqueTerm wrapper
 function StartTerm()
@@ -78,6 +79,7 @@ function StartTerm()
 endfunction
 
 " Project Tree
+let NERDTreeMapActivateNode='<right>'
 autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 autocmd FocusGained * call s:UpdateNERDTree()
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
@@ -143,6 +145,12 @@ function s:UpdateNERDTree(...)
     CommandTFlush
   endif
 endfunction
+
+
+
+au BufRead,BufNewFile *.less setfiletype less
+
+
 
 " Utility functions to create file commands
 function s:CommandCabbr(abbreviation, expansion)

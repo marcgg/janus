@@ -1,4 +1,5 @@
 set nocompatible
+let mapleader=","
 
 set number
 set ruler
@@ -63,6 +64,9 @@ function s:setupMarkup()
   call s:setupWrapping()
   map <buffer> <Leader>p :Hammer<CR>
 endfunction
+
+" less
+au BufRead,BufNewFile *.less setfiletype less
 
 " make uses real tabs
 au FileType make set noexpandtab
