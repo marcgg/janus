@@ -5,8 +5,6 @@ set number
 set ruler
 syntax on
 
-nnoremap <esc> :noh<return><esc>
-
 " Set encoding
 set encoding=utf-8
 
