@@ -69,7 +69,7 @@ set visualbell
 set guioptions-=T
 
 " Default gui color scheme
-color jammy
+color solarized
 set guifont=Anonymous_Pro:h16
 
 " ConqueTerm wrapper
