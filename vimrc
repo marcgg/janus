@@ -37,6 +37,7 @@ set noequalalways
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " Double leader -> prev file
 noremap <leader><leader> <c-^>
@@ -64,9 +65,6 @@ function s:setupMarkup()
   call s:setupWrapping()
   map <buffer> <Leader>p :Hammer<CR>
 endfunction
-
-" less
-au BufRead,BufNewFile *.less setfiletype less
 
 " make uses real tabs
 au FileType make set noexpandtab
@@ -129,7 +127,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+color solarized
 
 " Directories for swp files
 set backupdir=~/.vim/backup
