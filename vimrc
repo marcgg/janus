@@ -5,6 +5,9 @@ set number
 set ruler
 syntax on
 
+" Misc
+set colorcolumn=90
+
 " Set encoding
 set encoding=utf-8
 
